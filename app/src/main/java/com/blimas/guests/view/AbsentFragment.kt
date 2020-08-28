@@ -1,4 +1,4 @@
-package com.blimas.guests.ui.home
+package com.blimas.guests.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,21 +9,22 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.blimas.guests.R
+import com.blimas.guests.viewmodel.AbsentViewModel
 
-class AllGuestsFragment : Fragment() {
+class AbsentFragment : Fragment() {
 
-    private lateinit var homeViewModel: AllGuestsViewModel
+    private lateinit var absentViewModel: AbsentViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(AllGuestsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
+        absentViewModel =
+                ViewModelProviders.of(this).get(AbsentViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_slideshow, container, false)
+        val textView: TextView = root.findViewById(R.id.text_slideshow)
+        absentViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

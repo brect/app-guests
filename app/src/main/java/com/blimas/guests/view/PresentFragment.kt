@@ -1,4 +1,4 @@
-package com.blimas.guests.ui.gallery
+package com.blimas.guests.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.blimas.guests.R
+import com.blimas.guests.viewmodel.PresentViewModel
 
 class PresentFragment : Fragment() {
 

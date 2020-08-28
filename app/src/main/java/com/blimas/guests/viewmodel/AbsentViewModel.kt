@@ -1,4 +1,4 @@
-package com.blimas.guests.ui.slideshow
+package com.blimas.guests.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
