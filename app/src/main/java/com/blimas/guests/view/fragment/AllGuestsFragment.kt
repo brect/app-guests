@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.blimas.guests.R
 import com.blimas.guests.service.constants.GuestConstants
+import com.blimas.guests.service.model.GuestModel
 import com.blimas.guests.view.activity.GuestFormActivity
 import com.blimas.guests.view.adapter.GuestAdapter
 import com.blimas.guests.view.listener.GuestListener

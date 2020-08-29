@@ -19,17 +19,17 @@ class GuestViewHolder(itemView: View, private val listener: GuestListener) : Rec
         }
 
         textName.setOnLongClickListener {
-            showDialog(guest)
+            showDialog(guest.id)
             true
         }
     }
 
-    private fun showDialog(guest: GuestModel) {
+    private fun showDialog(id: Int) {
         AlertDialog.Builder(itemView.context)
             .setTitle(R.string.remocao_convidado)
             .setMessage(R.string.deseja_remover)
             .setPositiveButton(R.string.remover) { dialog, which ->
-                listener.onLongClickListener(guest.id)
+                listener.onLongClickListener(id)
             }
             .setNegativeButton(R.string.cancelar, null)
             .show()
