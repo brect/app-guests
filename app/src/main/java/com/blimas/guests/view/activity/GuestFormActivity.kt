@@ -1,4 +1,4 @@
-package com.blimas.guests.view
+package com.blimas.guests.view.activity
 
 import android.os.Bundle
 import android.view.View

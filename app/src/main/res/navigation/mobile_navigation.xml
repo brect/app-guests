@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_all"
-        android:name="com.blimas.guests.view.AllGuestsFragment"
+        android:name="com.blimas.guests.view.fragment.AllGuestsFragment"
         android:label="@string/menu_all_guests"
         tools:layout="@layout/fragment_all" />
 
     <fragment
         android:id="@+id/nav_present"
-        android:name="com.blimas.guests.view.PresentFragment"
+        android:name="com.blimas.guests.view.fragment.PresentFragment"
         android:label="@string/menu_presents"
         tools:layout="@layout/fragment_present" />
 
     <fragment
         android:id="@+id/nav_absents"
-        android:name="com.blimas.guests.view.AbsentFragment"
+        android:name="com.blimas.guests.view.fragment.AbsentFragment"
         android:label="@string/menu_absents"
         tools:layout="@layout/fragment_absent" />
 </navigation>

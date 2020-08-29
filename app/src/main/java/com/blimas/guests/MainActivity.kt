@@ -12,7 +12,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.blimas.guests.view.GuestFormActivity
+import com.blimas.guests.view.activity.GuestFormActivity
 
 class MainActivity : AppCompatActivity() {
 
