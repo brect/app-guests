@@ -18,14 +18,14 @@ import com.blimas.guests.viewmodel.AllGuestsViewModel
 
 class AllGuestsFragment : Fragment() {
 
-    private lateinit var mAllGuestViewModel: AllGuestsViewModel
+    private lateinit var mViewModel: AllGuestsViewModel
     private val mAdapter: GuestAdapter = GuestAdapter()
     private lateinit var mListener: GuestListener
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
-        mAllGuestViewModel =
+        mViewModel =
             ViewModelProvider(this).get(AllGuestsViewModel::class.java)
 
         val root = inflater.inflate(R.layout.fragment_all, container, false)
@@ -46,23 +46,28 @@ class AllGuestsFragment : Fragment() {
 
                 startActivity(intent)
             }
+
+            override fun onLongClickListener(id: Int) {
+                mViewModel.deleteGuest(id)
+                mViewModel.load()
+            }
         }
 
         mAdapter.attachListener(mListener)
         observe()
 
-        mAllGuestViewModel.load()
+        mViewModel.load()
 
         return root
     }
 
     override fun onResume() {
         super.onResume()
-        mAllGuestViewModel.load()
+        mViewModel.load()
     }
 
     private fun observe() {
-        mAllGuestViewModel.guestList.observe(viewLifecycleOwner, Observer {
+        mViewModel.guestList.observe(viewLifecycleOwner, Observer {
             mAdapter.updateGuests(it)
         })
     }

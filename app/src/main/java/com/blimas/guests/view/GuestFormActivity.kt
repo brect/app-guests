@@ -10,7 +10,6 @@ import com.blimas.guests.R
 import com.blimas.guests.service.constants.GuestConstants
 import com.blimas.guests.viewmodel.GuestFormViewModel
 import kotlinx.android.synthetic.main.activity_guest_form.*
-import kotlinx.android.synthetic.main.item_guest.*
 
 class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -64,8 +63,6 @@ class GuestFormActivity : AppCompatActivity(), View.OnClickListener {
             } else {
                 radio_absent.isChecked = true
             }
-
-
         })
     }
 
